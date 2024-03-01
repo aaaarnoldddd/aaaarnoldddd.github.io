@@ -8,7 +8,7 @@
       <link href="/2024/03/01/%E9%85%8D%E7%BD%AEhexo/"/>
       <url>/2024/03/01/%E9%85%8D%E7%BD%AEhexo/</url>
       
-        <content type="html"><![CDATA[<p>踩了好多坑。。。</p><p>服了。。。</p><blockquote><p>在source文件夹下单独建文件夹image存放图片，引用图片时用如下格式</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">text</span>](<span class="link">/images/foldername/filename</span>)</span><br></pre></td></tr></table></figure><p>在markdown中编译不出来，但能在hexo上显示</p><p><img src="/images/%E9%85%8D%E7%BD%AEhexo/p1.png" alt="图片"></p><p>编译时根目录在<strong>source</strong>文件夹，故直接在__source__下新建images文件夹，用相对路径引用即可。</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<p>踩了好多坑。。。</p><p>服了。。。</p><blockquote><p>在source文件夹下单独建文件夹image存放图片，引用图片时用如下格式</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">text</span>](<span class="link">/images/foldername/filename</span>)</span><br></pre></td></tr></table></figure><p>在markdown中编译不出来，但能在hexo上显示</p><p><img src="/images/%E9%85%8D%E7%BD%AEhexo/p1.png" alt="图片"></p><p>编译时根目录在<strong>source</strong>文件夹，故直接在<strong>source</strong>下新建images文件夹，用相对路径引用即可。</p></blockquote>]]></content>
       
       
       <categories>
