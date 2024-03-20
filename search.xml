@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>mlp原理</title>
+      <link href="/2024/03/20/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/mlp%E5%8E%9F%E7%90%86/"/>
+      <url>/2024/03/20/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/mlp%E5%8E%9F%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h2 id="mlp原理">mlp原理</h2><p>多层感知机，简称mlp，通过在网络中加入一个或多个隐藏层来实现。设矩阵 $\pmb X\in R^{n\times d}$ 表示 $n$ 个小样本，设 $\pmb H\in R^{n\times h}$ 表示有 $h$ 个输出的隐藏层输出，有：<br>$$<br>\pmb H=\pmb X\pmb W^{(1)}+b^{(1)}<br>$$</p><p>$$<br>\pmb O=\pmb H\pmb W^{(2)}+b^{(2)}<br>$$</p><p>设置激活函数 $\sigma$：<br>$$<br>\pmb H=\sigma(\pmb X\pmb W^{(1)}+b^{(1)})<br>$$</p><p>$$<br>\pmb O=\pmb H\pmb W^{(2)}+b^{(2)}<br>$$</p><p>常用的激活函数有 $ReLU,sigmoid$ 等。</p><h2 id="mlp改进softmax回归">mlp改进softmax回归</h2><p>在定义模型部分改为：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###添加输出为256的隐藏层，激活函数为&#x27;relu&#x27;</span></span><br><span class="line">net = tf.keras.models.Sequential([</span><br><span class="line">    tf.keras.layers.Flatten(),</span><br><span class="line">    tf.keras.layers.Dense(<span class="number">256</span>, activation=<span class="string">&#x27;relu&#x27;</span>),</span><br><span class="line">    tf.keras.layers.Dense(<span class="number">10</span>)])</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 神经网络 </category>
+          
+          <category> 多层感知机 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 神经网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mashups-1</title>
       <link href="/2024/03/20/ACM/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/mashups-1/"/>
       <url>/2024/03/20/ACM/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/mashups-1/</url>
@@ -138,8 +165,6 @@
             
             <tag> 神经网络 </tag>
             
-            <tag> math </tag>
-            
         </tags>
       
     </entry>
@@ -261,8 +286,6 @@
         <tags>
             
             <tag> 神经网络 </tag>
-            
-            <tag> math </tag>
             
         </tags>
       
