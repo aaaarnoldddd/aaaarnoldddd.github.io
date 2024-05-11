@@ -28,9 +28,9 @@
             
             <tag> dp </tag>
             
-            <tag> 最短路 </tag>
+            <tag> bfs/dfs </tag>
             
-            <tag> dfs/bfs </tag>
+            <tag> 最短路 </tag>
             
         </tags>
       
@@ -61,9 +61,9 @@
             
             <tag> math </tag>
             
-            <tag> dp </tag>
-            
             <tag> 位运算 </tag>
+            
+            <tag> dp </tag>
             
         </tags>
       
@@ -208,7 +208,7 @@
             
             <tag> 分治 </tag>
             
-            <tag> dfs/bfs </tag>
+            <tag> bfs/dfs </tag>
             
         </tags>
       
@@ -765,11 +765,11 @@
             
             <tag> math </tag>
             
-            <tag> greedy </tag>
-            
             <tag> dp </tag>
             
             <tag> bfs/dfs </tag>
+            
+            <tag> greedy </tag>
             
             <tag> topsort </tag>
             
