@@ -55,13 +55,13 @@
             
             <tag> data structure </tag>
             
-            <tag> strings </tag>
-            
-            <tag> math </tag>
-            
             <tag> dp </tag>
             
             <tag> bfs/dfs </tag>
+            
+            <tag> math </tag>
+            
+            <tag> strings </tag>
             
         </tags>
       
@@ -179,13 +179,13 @@
             
             <tag> data structure </tag>
             
-            <tag> strings </tag>
+            <tag> bfs/dfs </tag>
             
             <tag> math </tag>
             
-            <tag> bfs/dfs </tag>
-            
             <tag> dsu </tag>
+            
+            <tag> strings </tag>
             
         </tags>
       
@@ -214,11 +214,11 @@
             
             <tag> ACM </tag>
             
-            <tag> math </tag>
-            
             <tag> dp </tag>
             
             <tag> bfs/dfs </tag>
+            
+            <tag> math </tag>
             
             <tag> 最短路 </tag>
             
@@ -390,11 +390,11 @@
             
             <tag> ACM </tag>
             
+            <tag> bfs/dfs </tag>
+            
             <tag> math </tag>
             
             <tag> 分治 </tag>
-            
-            <tag> bfs/dfs </tag>
             
         </tags>
       
@@ -771,9 +771,9 @@
             
             <tag> ACM </tag>
             
-            <tag> math </tag>
-            
             <tag> dp </tag>
+            
+            <tag> math </tag>
             
         </tags>
       
@@ -945,13 +945,13 @@
       
         <tags>
             
-            <tag> math </tag>
+            <tag> greedy </tag>
             
             <tag> dp </tag>
             
             <tag> bfs/dfs </tag>
             
-            <tag> greedy </tag>
+            <tag> math </tag>
             
             <tag> topsort </tag>
             
