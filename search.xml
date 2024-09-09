@@ -4,6 +4,66 @@
   
     
     <entry>
+      <title>ccpc网络赛</title>
+      <link href="/2024/09/09/ACM/%E6%AF%94%E8%B5%9B/ccpc%E7%BD%91%E7%BB%9C%E8%B5%9B/"/>
+      <url>/2024/09/09/ACM/%E6%AF%94%E8%B5%9B/ccpc%E7%BD%91%E7%BB%9C%E8%B5%9B/</url>
+      
+        <content type="html"><![CDATA[<p>队名：智力不太好</p><p>过题数：5/12</p><p>排名：448/2156，校排第四</p><p>比赛地址：<a href="https://codeforces.com/gym/105336">Dashboard - The 2024 CCPC Online Contest - Codeforces</a></p><p>第一次打CCPC网络赛，着实没想到网络赛第一步筛的是网络好的。比赛开始20分钟后刷出了题目，但是没人过题，结果挑了一个A来看（全场最难的题之一），还跟队友推得有理有据的，似乎是一个水题，，，30分钟后队友的电脑刷出题目了，发现L已经过了一车人，天都塌了，索性马上签L，然后想了想放弃了A（太明智了），开始签其他题。</p><p>除了L签到，还有一个博弈签到，也被速速推出然后一发，跟榜看B，队友一眼发现性质，然后又过了，开始1小时把签到题都签上了，甚至排在了学校第一。</p><p>然后就是慢慢啃中档题，两个都是dp，放心交给队友，推了推也推出了式子，虽然很丑（丑就对了）但是过了，另一个dp题交了几次wa了，后来我搓了几个样例试了试，查出问题后也很快过了。</p><p>然后就开始坐牢了，，，</p><p>另外一个J题，同校的很多都已经过了，然而我们一直干瞪眼，最后还剩一个半小时的时候（延长了一个小时）我想到了一个转化，似乎很有道理，然后就不会了。后来看题解发现这个转化是必要的，然后就用线性基随便搞搞就出来了（不会）。</p><p>今天睡醒看到队长公布名额，我们学校一共4个名额，我们队刚好是校排第四，乐乐乐，有名额就行，也算是给这赛季开了一个还不错的头。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ACM </category>
+          
+          <category> mashups </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ACM </tag>
+            
+            <tag> Algorithm </tag>
+            
+            <tag> Data structure </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>线性基</title>
+      <link href="/2024/09/09/ACM/%E6%A8%A1%E6%9D%BF/%E7%BA%BF%E6%80%A7%E5%9F%BA/"/>
+      <url>/2024/09/09/ACM/%E6%A8%A1%E6%9D%BF/%E7%BA%BF%E6%80%A7%E5%9F%BA/</url>
+      
+        <content type="html"><![CDATA[<p><strong>线性基</strong>：线性基是一个<strong>数的集合</strong>，并且每个序列都拥有<strong>至少一个</strong>线性基，取线性基中若干个数异或起来可以得到原序列中的任何一个数。类似于基底的概念，只不过运算方式是异或。</p><p><strong>性质</strong>：</p><pre><code>1. 原序列里面的任意一个数都可以由线性基里面的一些数异或得到。1. 线性基里面的任意一些数异或起来都不能得到 0。1. 线性基里面的数的个数唯一，并且在保持性质一的前提下，数的个数是最少的。</code></pre><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(ll x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">60</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(x&amp;(<span class="number">1ll</span>&lt;&lt;i))<span class="comment">//注意，如果i大于31，前面的1的后面一定要加ll</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(d[i])x^=d[i];</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                d[i]=x;</span><br><span class="line">                <span class="keyword">break</span>;<span class="comment">//插入成功就退出</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">work</span><span class="params">()</span><span class="comment">//处理线性基</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">60</span>;i++)</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=i;j++)</span><br><span class="line"><span class="keyword">if</span>(d[i]&amp;(<span class="number">1ll</span>&lt;&lt;(j<span class="number">-1</span>)))d[i]^=d[j<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">k_th</span><span class="params">(ll k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(k==<span class="number">1</span>&amp;&amp;tot&lt;n)<span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//特判一下，假如k=1，并且原来的序列可以异或出0，就要返回0，tot表示线性基中的元素个数，n表示序列长度</span></span><br><span class="line"><span class="keyword">if</span>(tot&lt;n)k--;<span class="comment">//类似上面，去掉0的情况，因为线性基中只能异或出不为0的解</span></span><br><span class="line"><span class="built_in">work</span>();</span><br><span class="line">ll ans=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">60</span>;i++)</span><br><span class="line"><span class="keyword">if</span>(d[i]!=<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span>(k%<span class="number">2</span>==<span class="number">1</span>)ans^=d[i];</span><br><span class="line">k/=<span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>d[i]</code> 表示第 $i$ 为为1，前面位数都为0的基。线性基处理之后，会完成化简，成为最简的线性基。</p><p>对于求第 $k$ 小的值，将 $k$ 先转成二进制，假如 $k$ 的第 $i$ 位为1， $ans$ 就异或上线性基中第 $i$ 个元素。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> ACM </category>
+          
+          <category> 技术栈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ACM </tag>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>cs106l part2</title>
       <link href="/2024/09/05/cs106l/cs106l-part2/"/>
       <url>/2024/09/05/cs106l/cs106l-part2/</url>
